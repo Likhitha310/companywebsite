@@ -1,0 +1,143 @@
+/* General resets */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Body styling */
+body {
+    background-color: #f8f9fa;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Navigation bar */
+nav {
+    background-color: #0056b3;
+    padding: 10px 20px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 15px;
+    transition: background 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: #007bff;
+    border-radius: 5px;
+}
+
+/* Hero section */
+#hero {
+    background-image: url('https://source.unsplash.com/1600x600/?technology');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 100px 0;
+    margin-top: 60px; /* To push content down from the fixed nav */
+}
+
+#hero h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+#hero p {
+    font-size: 1.25rem;
+}
+
+/* About Section */
+#about {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+#about h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+#about p {
+    font-size: 1.1rem;
+    color: #555;
+}
+
+/* Buttons */
+button, .btn {
+    background-color: #0056b3;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+}
+
+button:hover, .btn:hover {
+    background-color: #007bff;
+    transform: translateY(-2px);
+}
+
+/* Icons Section */
+.icons {
+    display: flex;
+    justify-content: space-around;
+    padding: 40px 0;
+    margin-top: 50px;
+}
+
+.icons .icon {
+    text-align: center;
+}
+
+.icons .icon img {
+    width: 80px;
+    transition: transform 0.3s ease;
+}
+
+.icons .icon:hover img {
+    transform: scale(1.2);
+}
+
+.icons .icon p {
+    margin-top: 10px;
+    font-size: 1.1rem;
+    color: #333;
+}
+
+.icons .icon button {
+    margin-top: 10px;
+}
+
+/* Footer */
+footer {
+    background-color: #343a40;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 50px;
+}
+
+footer p {
+    font-size: 1rem;
+}
