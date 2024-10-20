@@ -7,7 +7,12 @@ const PORT = 3000;
 app.use(express.static(path.join(__dirname, 'public')));
 
 // Set EJS as the templating engine
-app.set('view engine', 'ejs');
+// app.set('view engine', 'ejs');
+
+// view engine setup
+app.set('views', path.join(__dirname, 'views'));
+app.engine('html', require('ejs').renderFile);
+app.set('view engine', 'html');
 
 // Set the views directory
 app.set('views', path.join(__dirname, 'src', 'views'));
@@ -22,7 +27,7 @@ app.get('/about', (req, res) => {
 });
 
 app.get('/projects', (req, res) => {
-    res.render('project'); // Render project.ejs
+    res.render('projects'); // Render project.ejs
 });
 
 app.get('/contact', (req, res) => {
